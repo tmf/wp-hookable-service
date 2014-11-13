@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2014 Tom Forrer (http://github.com/tmf)
  */
 
-namespace Tmf\Container;
+namespace Tmf\Wordpress\Container;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
