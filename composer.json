@@ -1,21 +1,21 @@
 {
-  "name": "tmf/wp-hookable-service",
-  "description": "A Pimple ServiceProvider that registers pimple services and hooks them up the WordPress Plugin system (actions, filters)",
-  "require": {
-    "php": ">=5.4.0",
-    "pimple/pimple": "~3.0"
-  },
-  "require-dev": {
-    "halleck45/php-metrics": "~1.0",
-    "hoa/ruler": "~1.0@dev"
-  },
-  "autoload": {
-    "classmap": ["classes"]
-  },
-  "authors": [
-    {
-      "name": "Tom Forrer",
-      "email": "tom.forrer@gmail.com"
-    }
-  ]
+    "name": "tmf/wp-hookable-service",
+    "description": "A Pimple ServiceProvider that registers pimple services and hooks them up the WordPress Plugin system (actions, filters)",
+    "require": {
+        "php": ">=5.4.0",
+        "pimple/pimple": "~3.0"
+    },
+    "require-dev": {
+        "halleck45/php-metrics": "~1.0",
+        "hoa/ruler": "~1.0@dev"
+    },
+    "autoload": {
+        "classmap": ["classes"]
+    },
+    "authors": [
+        {
+            "name": "Tom Forrer",
+            "email": "tom.forrer@gmail.com"
+        }
+    ]
 }

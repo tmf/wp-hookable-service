@@ -1,6 +1,6 @@
 <?php
 /**
- * @autor Tom Forrer <tom.forrer@gmail.com>
+ * @autor     Tom Forrer <tom.forrer@gmail.com>
  * @copyright Copyright (c) 2014 Tom Forrer (http://github.com/tmf)
  */
 
@@ -17,17 +17,17 @@ use Pimple\Container;
  */
 interface ContainerAwareInterface
 {
-  /**
-   * Getter
-   *
-   * @return Container the pimple service container
-   */
-  public function getContainer();
+    /**
+     * Getter
+     *
+     * @return Container the pimple service container
+     */
+    public function getContainer();
 
-  /**
-   * Setter
-   *
-   * @param Container $container the pimple service container
-   */
-  public function setContainer(Container $container);
+    /**
+     * Setter
+     *
+     * @param Container $container the pimple service container
+     */
+    public function setContainer(Container $container);
 } 
