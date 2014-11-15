@@ -6,8 +6,6 @@
 
 namespace Tmf\Wordpress\Container;
 
-use Pimple\Container;
-
 /**
  * Class HookableService
  *
@@ -15,10 +13,7 @@ use Pimple\Container;
  */
 abstract class HookableService implements ContainerAwareInterface
 {
-    /**
-     * @var Container $container the pimple service container
-     */
-    protected $container;
+    use ContainerAwareTrait;
 
     /**
      * By default the HookableServiceProvider calls the "initialize" method when the 'init' WordPress action is
@@ -28,21 +23,5 @@ abstract class HookableService implements ContainerAwareInterface
     public function initialize()
     {
 
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function getContainer()
-    {
-        return $this->container;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function setContainer(Container $container)
-    {
-        $this->container = $container;
     }
 }
