@@ -47,9 +47,12 @@ class HookableServiceProvider implements ServiceProviderInterface
         $this->serviceKey = $serviceKey;
         $this->serviceClass = $serviceClass;
 
-        if (!isset($hookConnections['priority'])) {
-            $hookConnections['priority'] = 10;
+        foreach($hookConnections as $index => $hookConnection){
+            if (!isset($hookConnections[$index]['priority'])) {
+                $hookConnections[$index]['priority'] = 10;
+            }
         }
+
         $this->hookConnections = $hookConnections;
     }
 
