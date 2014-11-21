@@ -106,7 +106,7 @@ class HookableServiceProvider implements ServiceProviderInterface
             if (method_exists($container[$serviceKey], $method)) {
 
                 // if the $param_arr array has more elements than the method has arguments: it works fine. more method arguments than elements in $param_arr triggers an error
-                call_user_func_array(array($container[$serviceKey], $method), func_get_args());
+                return call_user_func_array(array($container[$serviceKey], $method), func_get_args());
             }
         }, $priority, 100); // 100 should be enough accepted arguments. call_user_func_array will take care of the rest
     }
