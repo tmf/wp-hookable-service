@@ -90,6 +90,8 @@ class HookableServiceProvider implements ServiceProviderInterface
     }
 
     /**
+     * Add a service method as a callback to a WordPress hook (filter or action) with a specific priority
+     *
      * @param string $hook      the WordPress hook, an action or a filter
      * @param string $method    the method to hook up
      * @param int    $priority  the action's or filter's priority
@@ -108,6 +110,9 @@ class HookableServiceProvider implements ServiceProviderInterface
                 // if the $param_arr array has more elements than the method has arguments: it works fine. more method arguments than elements in $param_arr triggers an error
                 return call_user_func_array(array($container[$serviceKey], $method), func_get_args());
             }
+
+            // fallback for wordpress filters
+            return func_get_arg(0);
         }, $priority, 100); // 100 should be enough accepted arguments. call_user_func_array will take care of the rest
     }
 } 
